@@ -2,7 +2,7 @@
 
 Integrantes:
 
-Sebastian Castro - 202004569-0
+Sebastian Castro - 202004569-0 \\
 Benjamin Rivero - 202073531-k
 Inserte persona - Inserte rol
 
