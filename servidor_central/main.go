@@ -38,7 +38,7 @@ func main(){
 		}
 		log.Printf("En esta generacion se crearon %d cupos", created)
 		//Servidor 1
-		conn, err := grpc.Dial("10.6.46.140:8080", grpc.WithInsecure())
+		conn, err := grpc.Dial("10.6.46.107:8080", grpc.WithInsecure())
 		if err != nil{
 			log.Print("No se pudo conectar con Servidor1!")
 		}
@@ -55,7 +55,7 @@ func main(){
 		//log.Printf("Respuesta sincrona del Servidor1: %s", r.Ok)
 
 		//Servidor2
-		conn, err = grpc.Dial("10.6.46.141:8080", grpc.WithInsecure())
+		conn, err = grpc.Dial("10.6.46.108:8080", grpc.WithInsecure())
 		if err != nil{
 			log.Print("No se pudo conectar con Servidor2!")
 		}
@@ -89,7 +89,7 @@ func main(){
 		//	log.Printf("Respuesta sincrona del Servidor3: %s", r.Ok)
 
 		//Servidor4
-		conn, err = grpc.Dial("127.0.0.1:8080", grpc.WithInsecure())
+		conn, err = grpc.Dial("10.6.46.110:8080", grpc.WithInsecure())
 		if err != nil{
 			log.Print("No se pudo conectar con Servidor4!")
 		}
@@ -145,7 +145,7 @@ func main(){
 			created = created-r1
 		}
 		log.Printf("Se inscribieron %d cupos del Servidor1", r1-noinscritos)
-		conn, err = grpc.Dial("10.6.46.140:8080", grpc.WithInsecure())
+		conn, err = grpc.Dial("10.6.46.107:8080", grpc.WithInsecure())
 		if err != nil{
 			log.Print("No se puede conectar con Servidor1")
 		}
@@ -194,7 +194,7 @@ func main(){
 			created = created-r2
 		}
 		log.Printf("Se inscribieron %d cupos del Servidor2", r2-noinscritos)
-		conn, err = grpc.Dial("10.6.46.141:8080", grpc.WithInsecure())
+		conn, err = grpc.Dial("10.6.46.108:8080", grpc.WithInsecure())
 		if err != nil{
 			log.Print("No se puede conectar con Servidor2")
 		}
@@ -291,7 +291,7 @@ func main(){
 			created = created-r4
 		}
 		log.Printf("Se inscribieron %d cupos del Servidor4", r4-noinscritos)
-		conn, err = grpc.Dial("127.0.0.1:8080", grpc.WithInsecure())
+		conn, err = grpc.Dial("10.6.46.110:8080", grpc.WithInsecure())
 		if err != nil{
 			log.Print("No se puede conectar con Servidor4")
 		}
